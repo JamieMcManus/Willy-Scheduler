@@ -6,25 +6,32 @@
 
 Make sure to set the Connection String in the App.Config file !
 Set the Stored Procedure , CSV Name , Path and TimeToRun in the ScheduleConfiguration.xml
-The Options are as follows : 
+The Options are as follows :
+
 1.Procedure : This is the name of the stored procedure
 
 2.Name: This is the name of the file output + todays date appended.
 
 3.Path has the Following options :
-default : The CSV will be generated in root/CSV_Hub
+* default : The CSV will be generated in root/CSV_Hub
 eg
-`<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="default" TimeToRun="0 0/1 * 1/1 * ? *" />`
+```xml
+<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="default" TimeToRun="0 0/1 * 1/1 * ? *" />
+```
 
-NewFolder {yourfoldername}  : The CSV will be generated in root/CSV_Hub/{yourfoldername}
+* NewFolder {yourfoldername}  : The CSV will be generated in root/CSV_Hub/{yourfoldername}
 eg 
 
-`<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="{yourfoldername}" TimeToRun="0 0/1 * 1/1 * ? *" />`
+```xml
+<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="{yourfoldername}" TimeToRun="0 0/1 * 1/1 * ? *" />`
+``
 
-Full Path : The CSV will be generated at a path given by you 
+* Full Path : The CSV will be generated at a path given by you 
 eg
 
-`<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="C://TestFolder" TimeToRun="0 0/1 * 1/1 * ? *" />`
+```xml
+<ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="C://TestFolder" TimeToRun="0 0/1 * 1/1 * ? *" />
+```
 
 
 4.TimeToRun: This is a cron expression to set how frequently the CSV will be generated.
