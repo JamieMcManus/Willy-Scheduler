@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportList>
+
+  <ReportItem Procedure="GetTopSales" Name="TopSellersReport" Path="default" TimeToRun="0 0/1 * 1/1 * ? *" />
+  <ReportItem Procedure="GetLosses" Name="DPD" Path="LossFolder/DailyLosses" TimeToRun="0 0/1 * 1/1 * ? *" />
+</ReportList>
